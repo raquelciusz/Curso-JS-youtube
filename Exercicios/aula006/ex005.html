@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu testes</title>
+</head>
+<body>
+    <h1>Meus Testes</h1>
+    <p>Esses sao meus testes usando conceitos basico sozinha</p>
+
+    <script>
+        window.alert("Ola, vamos para algumas perguntas")
+        var nome = window.prompt("Qual seu nome? ")
+        var idade = window.prompt("Qual a sua idade? ")
+        var salario = Number(window.prompt("Qual seu salario?"))
+        //salario.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) //isso aqui nao funcionou
+        document.write(`Seu nome e ${nome.toUpperCase()}, voce tem a idade <strong>${idade}</strong>. <br>`)
+        document.write(`Seu salario em real e ${salario.toFixed(2).toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>
