@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Exercicio de Soma</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #resultado {
+            background-color: lightblue;
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Exercicio de Soma</h1>
+    <p>Abaixo criei campos de input para receber numeros e realizar a <strong>soma</strong>!</p>
+    <p>Fiz isso para treinar meus conhecimentos em <strong>JavaScript</strong>.</p>
+    <input type="text" name="campo1" id="campo1"> +
+    <input type="text" name="campo2" id="campo2">
+    <input type="button" value="Somar" name="Clique para somar" onclick="somar()">
+    <p>Resultado:</p>
+    <div id="resultado"></div> <br>
+    <br>
+    <input type="button" value="Limpar" onclick="limpar()">
+    <script>
+        var a = window.document.getElementById('campo1')
+        var b = window.document.getElementById('campo2')
+        function somar(){
+            var a = window.document.getElementById('campo1')
+            var b = window.document.getElementById('campo2')
+            var aNumber = Number(a.value)
+            var bNumber = Number(b.value)
+            var soma = aNumber + bNumber
+            resultado.innerHTML = `A soma entre os numeros ${aNumber} e ${bNumber} fica igual a ${soma}`
+        }
+
+        function limpar(){
+            a.innerHTML = " "
+            b.innerHTML = " "
+            resultado.innerHTML = ` `
+        }
+
+    </script>
+</body>
+</html>
