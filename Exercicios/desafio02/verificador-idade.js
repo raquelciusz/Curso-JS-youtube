@@ -10,30 +10,39 @@ function verificar(){
         var idade = ano - Number(formularioAno.value) //idade vai ser igual ao ano atual menos o ano do formulario
         var genero = ''
         var img = document.createElement('img') //isso e como se eu tivesse criando tag tag img no html
-        img.setAttribute('id', 'foto') //criamos atributos com o nome id e foto, como se fosse o id da tag
+        img.setAttribute('id', 'foto') //criamos atributos da img, como se fosse o src='foto' do html
         if (formularioSex[0].checked) { //se o formulario marcado for 0, ou seja o masculino q fica na posicao 0
             genero = 'Homem'
             if (idade >= 0 && idade < 10) {
                 //crianca
+                img.setAttribute('src', 'homem-bebe.jpg')
             } else if (idade >= 10 && idade < 21) {
                 //jovem
+                img.setAttribute('src', 'homem-jovem.jpg')
             } else if (idade < 50) {
                 //adulto
+                img.setAttribute('src', 'homem-jovem.jpg')
             } else {
                 //idoso
+                img.setAttribute('src', 'homem-idoso.jpg')
             }
         } else if (formularioSex[1].checked) {
             genero = 'Mulher'
             if (idade >= 0 && idade < 10) {
                 //crianca
+                img.setAttribute('src', 'mulher-bebe.jpg')
             } else if (idade >= 10 && idade < 21) {
                 //jovem
+                img.setAttribute('src', 'mulher-jovem.jpg')
             } else if (idade < 50) {
                 //adulto
+                img.setAttribute('src', 'mulher-jovem.jpg')
             } else {
                 //idoso
+                img.setAttribute('src', 'mulher-idosa.jpg')
             }
         }
-        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos. <br>`
+        res.appendChild(img) //isso vai fazer a imagem aparecer apos a mensagem do res, que e: detectamos genero com idade anos..
     }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="minhacriacao.css">
+    <title>Morar fora</title>
+</head>
+<body>
+    <header>
+        <h1>Morar fora</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Aonde voce mora?
+                <input type="radio" name="radpais" id="brasil" checked>
+                <label for="brasil">Brasil</label>
+                <input type="radio" name="radpais" id="foraPais">
+                <label for="foraPais">Fora do Pais</label>
+            </p>
+            <p>
+                Desde qual ano voce mora nesse lugar?
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+
+        <div id="resultado">
+            <p>Preencha os dados acima e veja o resultado!</p>
+            <img src="vida.jpg" alt="">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; RaquelCiusz</p>
+    </footer>
+    <script src="minhacriacao.js"></script>
+</body>
+</html>
