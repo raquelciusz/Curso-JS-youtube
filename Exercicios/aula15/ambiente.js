@@ -7,4 +7,5 @@ console.log(`O vetor de posicao um e o numero: ${num[1]}`)
 num.sort()
 console.log(num[0])
 
-num.push(1)
+let pos = num.indexOf(8)
+console.log(`O valor 8 esta na posicao ${pos}`)
